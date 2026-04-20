@@ -17,13 +17,13 @@ public class Car
         CarId = Guid.NewGuid();
         List<double> Invoice;
     }
-    public Car(string make, string model, int year, double price, Guid id)
+    public Car(string make, string model, int year, double price)
     {
         Make = make;
         Model = model;
         Year = year;
         Price = price;
-        CarId = id;
+        CarId = Guid.NewGuid();
         List<double> Invoice;
     }
     public string Display()

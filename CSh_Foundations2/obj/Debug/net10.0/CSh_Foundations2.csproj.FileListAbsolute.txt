@@ -16,3 +16,4 @@ D:\git_repos\CSh_Foundations2\CSh_Foundations2\bin\Debug\net10.0\ConsoleTables.d
 D:\git_repos\CSh_Foundations2\CSh_Foundations2\bin\Debug\net10.0\Wcwidth.dll
 D:\git_repos\CSh_Foundations2\CSh_Foundations2\obj\Debug\net10.0\CSh_Foundations2.csproj.AssemblyReference.cache
 D:\git_repos\CSh_Foundations2\CSh_Foundations2\obj\Debug\net10.0\CSh_Foun.B8496405.Up2Date
+D:\git_repos\CSh_Foundations2\CSh_Foundations2\obj\Debug\net10.0\CSh_Foundations2.sourcelink.json

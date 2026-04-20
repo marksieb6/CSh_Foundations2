@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSh_Foundations2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34b675988f900e5bc959c59c554fb86b79187ff9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSh_Foundations2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSh_Foundations2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

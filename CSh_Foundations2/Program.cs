@@ -15,7 +15,7 @@ class Program {
         // C# Foundations Challenge 2
         // constructor class instances
         Car getCar = new Car();
-        Car car2 = new Car("Toyota", "Camry", 2020, 24000, Guid.NewGuid());
+        Car car2 = new Car("Toyota", "Camry", 2020, 24000);
 
         // properties class instances
         CarProperties car3 = new CarProperties()
@@ -64,7 +64,7 @@ class Program {
                     int year = int.Parse(Console.ReadLine()!);
                     Console.WriteLine("Enter Car Price:");
                     double price = double.Parse(Console.ReadLine()!);
-                    carList.Add(new Car(make, model, year, price, Guid.NewGuid()));
+                    carList.Add(new Car(make, model, year, price));
                     break;
 
                 case "2": // List Cars
@@ -132,25 +132,26 @@ class Program {
                     break;
 
                 case "9": // exit statement + outputs list of cars to text file
-                    string path = (Directory.GetCurrentDirectory() + "Cars.json");
+                    string path = Directory.GetCurrentDirectory() + @"Cars.json";
                 
                     if (!File.Exists(path)) {
                         using (StreamWriter sw = File.CreateText(path))
                         {
-                            await sw.WriteLineAsync("This is the first time running...");
+                            sw.WriteLine("This is the first time running...");
                             string jsonString = JsonSerializer.Serialize(carList);
-                            await sw.WriteLineAsync(jsonString);
+                            sw.WriteLine(jsonString);
                         }
                     } 
                     else if (File.Exists(path)) {
                         using (StreamWriter sw = File.AppendText(path))
                         {
                             string jsonString = JsonSerializer.Serialize(carList);
-                            await sw.WriteLineAsync(jsonString);
+                            sw.WriteLine(jsonString);
                         }
                     }
                     // Console.Clear();
                     Console.WriteLine("Exiting program. Goodbye!");
+                    runCheck = false;
                     break;
 
                 default:
@@ -158,7 +159,8 @@ class Program {
                     Console.WriteLine("Invalid option. Please try again.");
                     continue;
             }
-            
+            // Deprecated code block that checks to continue the While loop
+            /* 
             Console.WriteLine("Do you want to continue? (y/n)");
             string exit = Console.ReadLine().ToLower();
             if (exit == "y")
@@ -173,6 +175,7 @@ class Program {
             {
                 Console.WriteLine("Invalid option. Please try again.");
             }
-        }
-    }
-}
+            */
+        } // end of While loop
+    } // end of Main function
+} // end of Program class
